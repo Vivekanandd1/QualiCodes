@@ -6,10 +6,13 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class test {
 	
-	public static void main(String[] args) throws InterruptedException, AWTException, IOException {
+	
+    @Test
+	public void DriverLaunch() throws InterruptedException, AWTException, IOException {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -17,9 +20,9 @@ public class test {
 		
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
-		driver.get("www.google.com");
+		driver.get("https://www.google.com/");
 		
-		String Filename = "Homework2.png";
+		/*String Filename = "Homework2.png";
 		String FilePath = "C:\\Users\\Admin\\Downloads\\";
 		
 //	    JavascriptExecutor js =(JavascriptExecutor) driver;
@@ -41,8 +44,13 @@ public class test {
 		if(fl.exists()) {
 			return true;
 		}
-		return false;
+		return false;*/
 		
+	}
+	
+	@Test
+	public void quitup() {
+		System.out.println("Khatam Tata Bye");
 	}
 
 
