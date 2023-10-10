@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNG_Basics.TestNGDriver">
+      <class name="TestNG_Basics.TestClass">
         <methods>
-          <include name="cleanup"/>
-          <include name="Execution"/>
-          <include name="setup"/>
+          <include name="GoogleLaunch"/>
         </methods>
-      </class> <!-- TestNG_Basics.TestNGDriver -->
+      </class> <!-- TestNG_Basics.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
