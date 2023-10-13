@@ -4,7 +4,7 @@
 <parameter name="browser" value="chrme"></parameter>
   <test thread-count="5" name="Test">
   <classes>
-  <class name="TestPackage.Test2"></class>
+  <class name="TestNG_Basics.TestNGFile"></class>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
