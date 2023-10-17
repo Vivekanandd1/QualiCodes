@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -16,10 +18,8 @@ public class test {
 	
 	@Parameters ("browser")
 	@BeforeTest
-	public void quitup(String browser) throws Exception {
+	public void quitup(@Optional("edge") String browser) throws Exception {
 		
-		
-	
 	switch (browser) {
 	case "chrome" :
         driver = new ChromeDriver();
@@ -50,6 +50,21 @@ public class test {
 //		Assert.assertEquals(actualtext, Expectedtest);
 		Assert.assertNotNull(actualtext);
 //		Assert.assertFalse(Title);
+
+	}
+	
+	@Test
+	public void GoogleLand() throws InterruptedException {
+		
+		driver.get("https://www.google.co.in/");
+		driver.findElement(By.name("q")).sendKeys("DDD" +Keys.ENTER);
+		Thread.sleep(3000);
+		
+	}
+	
+	@AfterTest
+	public void teardown() throws Exception {
+		Thread.sleep(3000);
 		driver.quit();
 	}
 
