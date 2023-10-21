@@ -27,6 +27,7 @@ public class KeyBoardAction {
 //			driver.findElement(By.id("APjFqb")).sendKeys("selenium" + Keys.ENTER);
 			
 			WebElement fd = driver.findElement(By.id("APjFqb"));
+//			fd.sendKeys(name);
 			
 			Actions Act = new Actions(driver);
 			Thread.sleep(3000);
