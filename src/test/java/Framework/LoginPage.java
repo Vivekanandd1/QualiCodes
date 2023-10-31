@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class LoginPage {
 	
-	@Test (dataProvider = "Credentials")
+	@Test (dataProvider = "Credentials",dataProviderClass = DataOcean.class)
 	public void Login(String UserName, String Password) {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
@@ -29,20 +29,4 @@ public class LoginPage {
 		driver.quit();;
 	}
      
-	@DataProvider (name="Credentials")
-	public Object[][] LoginCred() {
-		
-		Object[][] data = new Object [4][2];
-		data[0][0]="Admin";
-		data[0][1]="admin123";
-		data[1][0]="Admin2";
-		data[1][1]="admin223";
-		data[2][0]="Admin3";
-		data[2][1]="admin323";
-		data[3][0]="Admin4";
-		data[3][1]="admin423";
-		
-		return data;
-		
-	}
 }
